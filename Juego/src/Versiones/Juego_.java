@@ -151,7 +151,7 @@ public class Juego_ {
 		 */
 		/*---------------*/
 
-		/* - Declaracion de variables - */
+		/* - Declaracion de variables del menu - */
 
 		/*entrada*/Scanner sc = new Scanner(System.in);
 
