@@ -46,7 +46,7 @@ public class Juego_ {
 			System.out.println("| Eres un guerrera de la mas baja clase social, pero             |");
 			System.out.println("| desde el dia en el que te nombraron caballero marco el punto de|");
 			System.out.println("| partida de tu gran aventura...                                 |");
-			System.out.println("| ¡Mucha suerte heroe!                                           |");
+			System.out.println("| ï¿½Mucha suerte heroe!                                           |");
 			System.out.println("-----------------------------------------------------------------");
 		}else {
 			if (op.equals("hombre")) {
@@ -55,7 +55,7 @@ public class Juego_ {
 				System.out.println("| Eres un guerrero de la mas baja clase social, pero             |");
 				System.out.println("| desde el dia en el que te nombraron caballero marco el punto de|");
 				System.out.println("| partida de tu gran aventura...                                 |");
-				System.out.println("| ¡Mucha suerte heroe!                                           |");
+				System.out.println("| ï¿½Mucha suerte heroe!                                           |");
 				System.out.println("-----------------------------------------------------------------");
 			}
 			else {
@@ -67,11 +67,12 @@ public class Juego_ {
 		}
 	}
 
-	public static void preguntas () {
+	public static int preguntas () {
 
 		int p1;
 		int p2;
 		int p3;
+		int total = 0;
 
 		Scanner sc = new Scanner (System.in);
 
@@ -103,6 +104,8 @@ public class Juego_ {
 			if (eleccion.equals("147")||(eleccion.equals("157"))||(eleccion.equals("148"))||(eleccion.equals("149"))||(eleccion.equals("167"))||(eleccion.equals("247"))||(eleccion.equals("347"))) {
 
 				System.out.println("1");
+				
+				total= 10;
 
 
 			}else {
@@ -110,12 +113,15 @@ public class Juego_ {
 				if (eleccion.equals("257")||(eleccion.equals("357"))||(eleccion.equals("158"))||(eleccion.equals("159"))||(eleccion.equals("168"))||(eleccion.equals("249"))||(eleccion.equals("258"))||(eleccion.equals("259"))||(eleccion.equals("268"))||(eleccion.equals("348"))||(eleccion.equals("358"))) {
 
 					System.out.println("2");
+					total = 15;
 
 				} else {
 					//mas lento
 					if (eleccion.equals("267")||eleccion.equals("367")||eleccion.equals("368")||eleccion.equals("169")||eleccion.equals("269")||eleccion.equals("349")||eleccion.equals("359")||eleccion.equals("369")) {
 
-						System.out.println("3");				
+						System.out.println("3");
+						
+						total=25;
 
 					} else {
 
@@ -130,9 +136,10 @@ public class Juego_ {
 
 		}while ((eleccion.equals("000")));
 
-	}
+		return total;
+	} 
 
-	//START TO THE GAME!
+	/*Â¡START TO THE GAME!*/
 
 	public static void main(String[] args) {
 
