@@ -2,7 +2,7 @@ package Versiones;
 
 import java.util.Scanner;
 
-public class restricciones_y_clases {
+public class Juego_ {
 
 	public static void mensajeBienvenida () {
 
@@ -183,7 +183,7 @@ public class restricciones_y_clases {
 
 
 
-
+		/* - cerrando teclado - */sc.close();
 	}
 
 }
