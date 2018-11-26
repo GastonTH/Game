@@ -142,18 +142,29 @@ public class Juego_ {
 	/*¡START TO THE GAME!*/
 
 	public static void main(String[] args) {
+		
+		/*COSAS POR HACER*/
+		/*
+		 * TODO Finiquitar el menu.
+		 * TODO Historia
+		 * 
+		 */
+		/*---------------*/
 
 		/* - Declaracion de variables - */
 
 		/*entrada*/Scanner sc = new Scanner(System.in);
 
-		String opm; 
+		String opm;
+		String nombrePersonaje;
 		
 		/* - Bienvenida GTHDeveloper - */
 		mensajeBienvenida();
-
+		/* - ----------------------- - */ 
+		
+		
+		/* - Menu hasta salida de "Start" - */
 		do {
-			
 			menuEntrada();
 			System.out.printf("Dime tu eleccion: ");
 			/*Opcion menu minusculas*/
@@ -161,36 +172,68 @@ public class Juego_ {
 			opm=opm.toLowerCase();
 			/*----------------------*/
 			System.out.println("");
-			
-			
+
 			switch (opm) {
+			
+			case "exit":
+				
+				System.exit(0);
+				
+				break;
+
+			case "start":
+				break;
+
+			case "personaje":
+
+				System.out.println("Dime tu sexo, Hombre o Mujer");
+
+				opm=sc.nextLine();
+				opm=opm.toLowerCase();
+
+				personajes(opm);
+
+				break;
+			case "historia":
+
+				break;
+
 			case "opciones":
 
-				do {
-					
-					/*Prueba de opciones a back*/
-					
-					opciones();
-					
+				/*do al menu de opciones*/do {
+
+					/*MENU DE OPCIONES*/opciones();
+
 					System.out.printf("Dime tu eleccion: ");
 					/*Opcion menu minusculas*/
 					opm=sc.nextLine();
 					opm=opm.toLowerCase();
 					/*----------------------*/
-					
+
 				} while (!opm.equals("back"));
-				
+
 				break;
+				
+			/*Opcion para cualquier error de entrada.*/
 
 			default:
+
+				System.out.println("No contemplo esa opcion, dime otra por favor.");
+
 				break;
 			}
 
-		} while (!opm.equals("exit"));
+
+
+		} while (!opm.equals("start"));
+		
+		/*Ha elegido start, sale del do/while del menu y empieza el programa*/
+		
+		System.out.println("Has elegido comenzar tu aventura");
 
 
 
-		/* - cerrando teclado - */sc.close();
+		sc.close();	/* - cerrando teclado - */
 	}
 
 }
