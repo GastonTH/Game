@@ -14,7 +14,30 @@ public class creacion_del_personaje {
 	 
 	}
 
-
+	public static void contrato () {
+		
+		String nombre   = "Kuro";
+		String sexo     = "hombre";
+		String clase    = "guerrero";
+		String arma     = "espada espiritual";
+		String armadura = "placas";
+		
+		System.out.println  ("|------------------------------------------");
+		System.out.println  ("|          CONTRATO DE AVENTURERO");
+		System.out.println  ("|");
+		System.out.printf   ("|Nombre: %s\n",nombre);
+		System.out.println  ("|");
+		System.out.printf   ("|Sexo: %s\n", sexo);
+		System.out.println  ("|");
+		System.out.printf   ("|Clase: %s\n",clase);
+		System.out.println  ("|");
+		System.out.printf   ("|Arma actual: %s\n",arma);
+		System.out.println  ("|");
+		System.out.printf   ("|Armadura actual: %s\n",armadura);
+		System.out.println  ("|------------------------------------------");
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		Scanner sc= new Scanner(System.in);
@@ -22,7 +45,6 @@ public class creacion_del_personaje {
 		/*Declaracion de variables del personaje*/
 		
 		
-		String opper;
 		String sexo;/*chico o chica*/
 		String clase;/*Actualmente guerrero, mago o arquero*/
 		
@@ -32,6 +54,11 @@ public class creacion_del_personaje {
 		int ataque=ataqueInicial;
 		int vitalidadInicial=155;
 		int vitalidad=vitalidadInicial;
+		
+		/*Inventario*/
+		
+		String arma;
+		String armadura;
 		
 		/*Cuando haya daños decimales recordad hacer casting a ¡int!*/
 		
@@ -45,6 +72,8 @@ public class creacion_del_personaje {
 		/*contador para turno de jugador*/int contador;
 		
 		/* ------------------------------------ */
+		
+		/*CONTRATO*/ contrato();
 		
 		System.out.printf("Eres chico o chica: ");
 		sexo=sc.nextLine();
@@ -109,26 +138,32 @@ public class creacion_del_personaje {
 			
 			System.out.println("Elegiste ser un guerrero, se te otorgara una espada espiritual y una armadura de"
 					+ "malla basica pero resistente."
-					+ "La arma espiritual desaparecera cuando compres tu primera arma."
+					+ "El arma espiritual desaparecera cuando compres tu primera arma."
 					+ "Te vuelves increiblemente fuerte pero sacrificas tu velocidad,"
 					+ "pero te da igual.");
 			contador=14;
-			
+			arma="Espada espiritual";
+			armadura="Placas";
 			
 		}else if (clase.equals("arquero")||(clase.equals("arquera"))) {
 			
 			System.out.println("Elegiste ser un arquero, se te otorgara un arco espiritual y"
 					+ "una armadura de cuero."
-					+ "La arma espiritual desaparecera cuando compres tu primera arma."
+					+ "El arma espiritual desaparecera cuando compres tu primera arma."
 					+ "Te vuelves mas rapido que nadie.");
 			contador=6;
+			arma="Arco espiritual";
+			armadura="Cuero";
 
 		}else if (clase.equals("mago")||(clase.equals("maga"))) {
 			
 			System.out.println("Elegiste ser un mago, se te otorgara un baston espiritual"
 					+ "y una armadura de tela basica pero resistente."
+					+ "El arma espiritual desaparecera cuando compres tu primera arma."
 					+ "Te vuelves mas rapido y mas fuerte.");
 			contador=8;
+			arma="Baston espiritual";
+			armadura="Tela";
 			
 		}
 		
