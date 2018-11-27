@@ -29,9 +29,9 @@ public class creacion_del_personaje {
 		String nombrePrincipal;
 		
 		int ataqueInicial=100;
-		int ataque;
+		int ataque=ataqueInicial;
 		int vitalidadInicial=155;
-		int vitalidad;
+		int vitalidad=vitalidadInicial;
 		
 		/*Cuando haya daños decimales recordad hacer casting a ¡int!*/
 		
@@ -109,22 +109,30 @@ public class creacion_del_personaje {
 			
 			System.out.println("Elegiste ser un guerrero, se te otorgara una espada espiritual y una armadura de"
 					+ "malla basica pero resistente."
-					+ "La arma espiritual desaparecera cuando compres tu primera arma.");
+					+ "La arma espiritual desaparecera cuando compres tu primera arma."
+					+ "Te vuelves increiblemente fuerte pero sacrificas tu velocidad,"
+					+ "pero te da igual.");
+			contador=14;
+			
 			
 		}else if (clase.equals("arquero")||(clase.equals("arquera"))) {
 			
 			System.out.println("Elegiste ser un arquero, se te otorgara un arco espiritual y"
 					+ "una armadura de cuero."
-					+ "La arma espiritual desaparecera cuando compres tu primera arma.");
+					+ "La arma espiritual desaparecera cuando compres tu primera arma."
+					+ "Te vuelves mas rapido que nadie.");
+			contador=6;
 
 		}else if (clase.equals("mago")||(clase.equals("maga"))) {
 			
 			System.out.println("Elegiste ser un mago, se te otorgara un baston espiritual"
-					+ "y una armadura de tela basica pero resistente");
+					+ "y una armadura de tela basica pero resistente."
+					+ "Te vuelves mas rapido y mas fuerte.");
+			contador=8;
 			
 		}
 		
-		
+		System.out.println("ola");
 
 
 	}
