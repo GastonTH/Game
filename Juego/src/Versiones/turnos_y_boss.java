@@ -4,6 +4,40 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class turnos_y_boss {
+	
+	public static int [][] matrizBosses (){
+		
+		String [][] matrizBosses=new String [][] {{"1","Ivan-samaneitor"},{"2","ElAdri"},{"3","ElDopeOCHO!"}};
+		
+		
+		
+		return matrizBosses();
+		
+	}
+	
+	public static void vidaMostrar (String caracter, String pj, String boss, int vidaBoss, int vidaPj) {
+		
+		System.out.println(pj+" = "+vidaPj);
+		for (int i = 0; i < vidaPj/5; i++) {
+
+			System.out.printf("%s",caracter);
+
+		}
+		System.out.printf("%n");
+
+		
+		System.out.println(boss + " = " + vidaBoss);
+		for (int i = 0; i < vidaBoss/5; i++) {
+
+			System.out.printf("%s",caracter);
+
+		}
+		System.out.printf("%n");
+
+	
+	}
+	
+	
 
 	public static void main(String[] args) {
 
@@ -12,23 +46,28 @@ public class turnos_y_boss {
 		Scanner sc=new Scanner(System.in);
 		
         Random rnd=new Random();
+        
+        String caracter = "=";
 		
 		String pj 	= "Kuro";
-		String boss = "Calamardo";
+		String boss = "Bic";
 		String eleccion;
 		
-		int atkOP=20;
-		int atkPj=atkOP;
-		
+		int ataqueOrigPers=20;
+		int ataquePers=ataqueOrigPers;
+		//
 		int vitPJ = 300;
 		
-		int atkOB = 10;
-		int atkBoss=atkOB;
+		int ataqueOrigBoss = 10;
+		int ataqueBoss=ataqueOrigBoss;
+		//
 		int vitBoss = 300;
-		/*vector de boss para eleccion*/
+
 		/*int numero = (int) (Math.random() * 2) + 0;*/
 		int numero;
 		numero=rnd.nextInt(100);
+		
+		int contador=0;
 		
 		
 		
@@ -36,10 +75,8 @@ public class turnos_y_boss {
 			
 			do {
 				
-				//turno del personaje
 				
-				System.out.println("Boss: "+boss
-								 + " Vit:  "+vitBoss);
+				vidaMostrar(caracter,pj,boss,vitBoss,vitPJ);
 				
 				System.out.println("Que quieres hacer:"
 						+ " - Ataque."
@@ -47,19 +84,19 @@ public class turnos_y_boss {
 				eleccion=sc.nextLine();
 				eleccion=eleccion.toLowerCase();
 
-				if (eleccion.equals("atacar")) {
+				if (eleccion.equals("ataque")) {
 					
 					System.out.println("Atacas al boss");
 					System.out.println("");
 					
-					vitBoss-=atkPj;
+					vitBoss-=ataquePers;
 					break;
 
 				}else {
 					
 					if (eleccion.equals("defender")){
 						
-						atkBoss/=2;
+						ataqueBoss/=2;
 						break;
 						
 					
@@ -71,6 +108,8 @@ public class turnos_y_boss {
 					}
 
 				}
+				
+				ataquePers=ataqueOrigPers;
 					
 				
 			}while (true);
@@ -83,9 +122,12 @@ public class turnos_y_boss {
 			
 			if (numero==0/*ataque*/) {
 				
+				vitPJ-=ataqueBoss;
+				System.out.println("El ");
+				
 			}else {
 				
-				if (numero==1/*defensa*/) {
+				if (numero==234535/*defensa*/) {
 					
 					
 				}else/*se ha dormido*/ {
@@ -95,6 +137,8 @@ public class turnos_y_boss {
 				}
 				
 			}
+			
+			ataqueBoss=ataqueOrigBoss;
 			
 			
 			

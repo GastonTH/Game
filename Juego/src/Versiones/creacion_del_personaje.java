@@ -2,6 +2,8 @@ package Versiones;
 
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 public class creacion_del_personaje {
 	
 	public static void limpiar (/* para hacer un clear en pantalla */){
@@ -21,6 +23,7 @@ public class creacion_del_personaje {
 		String clase    = "guerrero";
 		String arma     = "espada espiritual";
 		String armadura = "placas";
+		String guion = "#";
 		
 		System.out.println  ("|------------------------------------------");
 		System.out.println  ("|          CONTRATO DE AVENTURERO");
@@ -36,6 +39,22 @@ public class creacion_del_personaje {
 		System.out.printf   ("|Armadura actual: %s\n",armadura);
 		System.out.println  ("|------------------------------------------");
 		
+		
+		for (int i = 0; i < nombre.length()+2; i++) {
+			
+			System.out.printf("%s",guion);
+			
+		}
+		System.out.printf("%n");
+		
+		System.out.println("#"+nombre+"#");
+		
+		for (int i = 0; i < nombre.length()+2; i++) {
+			
+			System.out.printf("%s",guion);
+			
+		}
+		System.out.printf("%n");
 	}
 	
 	public static void main(String[] args) {
