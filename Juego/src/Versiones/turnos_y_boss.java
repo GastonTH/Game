@@ -123,12 +123,13 @@ public class turnos_y_boss {
 			if (numero==0/*ataque*/) {
 				
 				vitPJ-=ataqueBoss;
-				System.out.println("El ");
+				System.out.println("El boss a atacado.");
 				
 			}else {
 				
 				if (numero==234535/*defensa*/) {
 					
+					System.out.println("El boss se defiende");
 					
 				}else/*se ha dormido*/ {
 					
