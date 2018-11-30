@@ -75,6 +75,23 @@ public class turnos_y_boss {
 		}
 		
 	}
+	
+	public static void inventarioPJ () {
+		
+		String [][] inventario = new String [5][2];
+		
+		inventario[0][0]="";//cantidad
+		inventario[0][1]="";
+		inventario[1][0]="";//cantidad
+		inventario[1][1]="";
+		inventario[2][0]="";//cantidad
+		inventario[2][1]="";
+		inventario[3][0]="";//cantidad
+		inventario[3][1]="";
+		inventario[4][0]="";//cantidad
+		inventario[4][1]="";
+		
+	}
 
 	public static void main(String[] args) {
 
