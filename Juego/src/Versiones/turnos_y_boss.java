@@ -135,7 +135,7 @@ public class turnos_y_boss {
 		
 		
 		
-		
+		/*
 		
 		
 		menuRPG();
@@ -146,37 +146,8 @@ public class turnos_y_boss {
 		
 		items();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
+		*/
+
 		
 		do {
 			
@@ -185,12 +156,16 @@ public class turnos_y_boss {
 				
 				vidaMostrar(caracter,pj,boss,vitBoss,vitPJ);
 				
+				System.out.println("");
+				
 				menuRPG();
+				
+				
 				
 				eleccion=sc.nextLine();
 				eleccion=eleccion.toLowerCase();
 
-				if (eleccion.equals("ataque")) {
+				if (eleccion.equals("atacar")) {
 					
 					System.out.println("Atacas al boss");
 					System.out.println("");
@@ -266,8 +241,6 @@ public class turnos_y_boss {
 
 		}
 
-
-*/
 
 
 	}

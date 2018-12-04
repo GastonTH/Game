@@ -18,7 +18,7 @@ public class creacion_del_personaje {
 
 	public static void contrato () {
 		
-		String nombre   = "Kuro";
+		String nombre   = "asd gfguisdhuisdhvgfdsjifdsjogf";
 		String sexo     = "hombre";
 		String clase    = "guerrero";
 		String arma     = "espada espiritual";
